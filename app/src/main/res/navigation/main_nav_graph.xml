@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/usersFragment">
+
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.aksoyh.mvvmwithkotlincoroutine.ui.main.fragments.ItemFragment"
+        android:label="ItemFragment"
+        tools:layout="@layout/fragment_item_list">
+        <action
+            android:id="@+id/action_usersFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.aksoyh.mvvmwithkotlincoroutine.ui.main.fragments.ItemDetailFragment"
+        android:label="ItemDetailFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        tools:layout="@layout/fragment_item_detail">
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+</navigation>

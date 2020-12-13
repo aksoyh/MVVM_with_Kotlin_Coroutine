@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MVVM With Kotlin Coroutine</string>
+    <string name="as_tv_welcome">Welcome to MVVM Kotlin Coroutines Example</string>
+</resources>
